@@ -32,7 +32,7 @@ public class SearchController : Controller
         }
         ViewBag.columns = ListController.ColumnChoices;
         ViewBag.jobs = jobs;
-        return View();
+        return View("Index");
     }
     //new above
 }
