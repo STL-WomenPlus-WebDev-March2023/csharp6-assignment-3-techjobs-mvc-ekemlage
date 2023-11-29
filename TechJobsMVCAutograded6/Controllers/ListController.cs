@@ -50,12 +50,12 @@ public class ListController : Controller
         if (value == "All") 
         {
             jobs = JobData.FindAll();
-            ViewBag.title = column;
+            ViewBag.title = column + ": " + value; //previously column and not "column + ": " + value"
         }
         else
         {
             jobs = JobData.FindByColumnAndValue(column, value);
-            ViewBag.title = column;
+            ViewBag.title = column + ": " + value; //previously column and not "column + ": " + value"
         }
         ViewBag.jobs = jobs;
         //new above
